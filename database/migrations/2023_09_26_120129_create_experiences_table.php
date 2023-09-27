@@ -21,10 +21,9 @@ return new class extends Migration
             $table->longText('description');
             $table->date('start_date');
             $table->date('end_date');
-            $table->binary('documentation');
-            $table->uuid('user_id');
+            $table->string('documentation');
+            $table->decimal('rating', 5, 2);
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

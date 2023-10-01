@@ -14,3 +14,5 @@ Route::post('/submit-form', [ExperienceController::class, 'addExperience'])->nam
 Route::put('/experiences/{id}', [ExperienceController::class, 'updateExperience'])->name('experience.update');
 Route::delete('/experiences/{id}', [ExperienceController::class, 'deleteExperience'])->name('experience.delete');
 Route::get('/experience-update/{id}', [ExperienceController::class, 'updateForm'])->name('experience.update.form');
+
+Route::get('/test', [ExperienceController::class, 'showForm'])->name('test');
